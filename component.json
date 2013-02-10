@@ -1,0 +1,11 @@
+{
+  "name": "element-event",
+  "repo": "onirame/element-event",
+  "description": "Element event component",
+  "version": "0.0.1",
+  "keywords": ["DOM", "Element", "event"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": ["index.js"]
+}
