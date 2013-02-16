@@ -1,4 +1,3 @@
-
 /**
  * element-event
  * Element event component
@@ -48,7 +47,7 @@ Event.prototype.on = function (event, callback) {
  * @api public
  */
 
-Event.prototype.on = function (event, callback) {
+Event.prototype.off = function (event, callback) {
   this.el.removeEventListener(event, callback, false);
   return this;
 };
