@@ -4,7 +4,7 @@ Element event component
 
 ## Installation
 
-    $ component install onirame/element-event
+    $ component install enricomarino/element-event
 
 ## License
 
