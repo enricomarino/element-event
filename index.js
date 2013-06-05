@@ -1,37 +1,55 @@
 /**
  * element-event
- * Element event component
+ * event plugin for element
  * 
  * @copyright 2013 Enrico Marino
  * @license MIT
  */
 
 /**
- * on
- * Add event listener.
- *
- * @param {String} event event name
- * @param {Function} callback callback
- * @return {Event} this for chaining
- * @api public
+ * Expose `event`
  */
 
-exports.on = function (event, callback) {
-  this.el.addEventListener(event, callback, false);
-  return this;
-};
+module.exports = event;
 
 /**
- * off
- * Remove event listener.
- *
- * @param {String} event event name
- * @param {Function} callback callback
- * @return {Event} this for chaining
- * @api public
+ * event
+ * 
+ * @param {element} element
+ * @return {element} element
  */
 
-exports.off = function (event, callback) {
-  this.el.removeEventListener(event, callback, false);
-  return this;
-};
+function event (element) {
+
+  /**
+   * on
+   * Add event listener.
+   *
+   * @param {String} event event name
+   * @param {Function} callback callback
+   * @return {Event} this for chaining
+   * @api public
+   */
+  
+  element.prototype.on = function (event, callback, capture) {
+    this.el.addEventListener(event, callback, capture || false);
+    return this;
+  };
+  
+  /**
+   * off
+   * Remove event listener.
+   *
+   * @param {String} event event name
+   * @param {Function} callback callback
+   * @return {Event} this for chaining
+   * @api public
+   */
+  
+  element.prototype.off = function (event, callback) {
+    this.el.removeEventListener(event, callback, capture || false);
+    return this;
+  };
+  
+  return element;
+}
