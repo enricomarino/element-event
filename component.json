@@ -1,9 +1,9 @@
 {
   "name": "element-event",
-  "repo": "onirame/element-event",
-  "description": "Element event component",
+  "repo": "enricomarino/element-event",
+  "description": "event plugin for element",
   "version": "0.0.1",
-  "keywords": ["DOM", "Element", "event"],
+  "keywords": ["element", "event"],
   "dependencies": {},
   "development": {},
   "license": "MIT",
