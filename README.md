@@ -4,7 +4,26 @@ Element event component
 
 ## Installation
 
-    $ component install enricomarino/element-event
+    component install enricomarino/element-event
+
+## API
+
+### element#on(String:event, Function:callback, Boolean:capture)
+
+### element#off(String:event, Function:callback, Boolean:capture)
+
+## Usage
+
+```js
+var element = require('element')();
+var event = require('event');
+
+element.use(event);
+
+var el = element(document.createElement('div'));
+
+el.on('click', console.log.bind(console));
+```
 
 ## License
 
