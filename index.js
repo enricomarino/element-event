@@ -6,20 +6,7 @@
  * @license MIT
  */
 
-/**
- * Expose `event`
- */
-
-module.exports = event;
-
-/**
- * event
- * 
- * @param {element} element
- * @return {element} element
- */
-
-function event (element) {
+module.exports = function (element) {
 
   /**
    * on
